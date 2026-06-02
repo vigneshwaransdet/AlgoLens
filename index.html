@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AlgoLens · Understand the question first</title>
+<meta name="description" content="See what a LeetCode question is actually asking — input and output, visually — before you solve it." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Spline+Sans+Mono:wght@400;500&family=Spline+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-name">AlgoLens</span>
+  </div>
+  <p class="brand-tag">Understand the question first.</p>
+</header>
+
+<main class="wrap">
+  <div class="picker">
+    <div class="picker-row">
+      <span class="pattern-pill"><span id="patternName"></span></span>
+      <select id="problemSel" aria-label="Choose a problem"></select>
+    </div>
+    <div class="asking-row">
+      <span id="diff" class="diff"></span>
+      <p id="asking" class="asking"></p>
+    </div>
+  </div>
+
+  <section class="panel panel-in">
+    <div class="panel-head">
+      <span class="tag tag-in">INPUT</span>
+      <span id="inLabel" class="panel-label"></span>
+    </div>
+    <div id="inRow" class="row"></div>
+    <p id="inNote" class="note"></p>
+  </section>
+
+  <div class="reveal-wrap">
+    <button id="revealBtn" class="reveal-btn"><i class="ti ti-arrow-down" aria-hidden="true"></i> See what they want</button>
+  </div>
+
+  <section class="panel panel-out" id="outWrap">
+    <div class="panel-head">
+      <span class="tag tag-out">OUTPUT</span>
+      <span id="outLabel" class="panel-label"></span>
+    </div>
+    <div id="outRow" class="row"></div>
+    <p id="outNote" class="note"></p>
+  </section>
+
+  <div id="hint" class="hint">
+    <span class="hint-key"><i class="ti ti-bulb" aria-hidden="true"></i> Key thing to notice</span>
+    <p id="hintText"></p>
+  </div>
+
+  <a id="link" class="leet-link" href="#" target="_blank" rel="noopener">Open this problem on LeetCode &rarr;</a>
+</main>
+
+<footer class="site-footer">
+  <span>See what the question wants, before you solve it.</span>
+</footer>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

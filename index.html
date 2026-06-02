@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AlgoLens · See the algorithm before you code it</title>
+<meta name="description" content="Interactive LeetCode pattern visualizer. Watch how algorithms work step-by-step before writing a single line of code." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Spline+Sans+Mono:wght@400;500;600&family=Spline+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true"></span>
+    <span class="brand-name">AlgoLens</span>
+  </div>
+  <p class="brand-tag">See the algorithm before you code it.</p>
+</header>
+
+<main class="layout">
+  <aside class="sidebar" aria-label="Pattern and problem picker">
+    <div class="picker-group">
+      <label class="picker-label" for="patternSel">Pattern</label>
+      <select id="patternSel"></select>
+    </div>
+    <div class="picker-group">
+      <label class="picker-label" for="problemSel">Problem</label>
+      <select id="problemSel"></select>
+    </div>
+    <div id="problemMeta" class="problem-meta"></div>
+  </aside>
+
+  <section class="stage" aria-label="Visualization stage">
+    <div id="statement" class="statement"></div>
+    <div id="canvasHost" class="canvas-host"></div>
+
+    <div class="controls">
+      <button id="btnPrev" class="ctl" aria-label="Previous step"><span class="ar">&larr;</span> Prev</button>
+      <button id="btnPlay" class="ctl ctl-primary" aria-label="Play or pause">Play</button>
+      <button id="btnNext" class="ctl" aria-label="Next step">Next <span class="ar">&rarr;</span></button>
+      <button id="btnReset" class="ctl" aria-label="Reset">Reset</button>
+    </div>
+
+    <div class="narrate" id="narrate" aria-live="polite"></div>
+    <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span>Built to make patterns click.</span>
+  <button id="btnCode" class="link-btn">View the code &rarr;</button>
+</footer>
+
+<div id="codeModal" class="modal" hidden>
+  <div class="modal-card">
+    <div class="modal-head">
+      <span id="codeTitle">Solution</span>
+      <button id="btnCloseCode" class="icon-btn" aria-label="Close">&times;</button>
+    </div>
+    <pre class="code-block"><code id="codeBody"></code></pre>
+  </div>
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
